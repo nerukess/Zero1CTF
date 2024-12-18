@@ -1,0 +1,38 @@
+def hidden_logic(a, b):
+    """Combine and scramble two ASCII values in an unusual way."""
+    combined = str(a) + str(b)
+    # 3?
+    scrambled = "".join([chr(ord(c) + 3) for c in combined])
+    
+    transformed = scrambled[::-1]
+    
+    return transformed
+
+def get_flag():
+    """The flag is hidden using a series of transformations."""
+
+    part1 = hidden_logic(70, 76)
+    part2 = hidden_logic(65, 71)
+    part3 = hidden_logic(123, 77)
+    part4 = hidden_logic(52, 108)
+    part5 = hidden_logic(87, 51)
+    part6 = hidden_logic(114, 64)
+    part7 = hidden_logic(95, 70)
+    part8 = hidden_logic(48, 94)
+    part9 = hidden_logic(110, 68)
+    part10 = hidden_logic(125, 32)
+
+
+    flag = part1 + part2 + part3 + part4 + part5 + part6 + part7 + part8 + part9 + part10
+    
+    return flag
+
+def main():
+    print("Welcome to the Reverse Engineering Challenge!")
+    print("The flag is hidden in the code. Analyze the source code to find it.")
+    
+ 
+    print("The flag is: ", get_flag())
+
+if __name__ == "__main__":
+    main()

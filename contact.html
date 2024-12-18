@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #0f3d0f; /* Dark green */
+            color: #d4f4d4; /* Light green */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1a4d1a;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            color: #d4f4d4;
+        }
+
+        nav {
+            background: #133913;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: #d4f4d4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #76c776;
+        }
+
+        h1 {
+            color: #76c776;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #b3e6b3;
+        }
+
+        /* Hidden flag styling */
+        .hidden-flag {
+            color: #0f3d0f; /* Match background color */
+        }
+
+        /* Ensure text is unselectable unless Ctrl+A */
+        .hidden-flag:hover {
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="about.html">About</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>If you have any questions, feedback, or need support, feel free to reach out to us. We are here to help you
+            make the most of your CTF experience!</p>
+        <p>Email: <a href="mailto:support@ctfwebsite.com" style="color: #76c776;">support@ctfwebsite.com</a></p>
+    </div>
+
+    <!-- Hidden Flag -->
+    <p class="hidden-flag">
+        FLAG{0p3N_Y0uR_3yE5_H4h4}
+    </p>
+
+    <footer>
+        &copy; 2024 CTF Website. All Rights Reserved.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #0f3d0f;
+            color: #d4f4d4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1a4d1a;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            color: #d4f4d4;
+        }
+
+        .challenge-container button:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease;
+        }
+
+        nav {
+            background: #133913;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: #d4f4d4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #76c776;
+        }
+
+        h1 {
+            color: #76c776;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #b3e6b3;
+        }
+
+        .warning {
+            color: red;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .challenge-container {
+            background: #2a5d2a;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .challenge-container h3 {
+            margin-bottom: 10px;
+            color: #76c776;
+        }
+
+        .challenge-container input {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .challenge-container button {
+            padding: 10px;
+            background-color: #76c776;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .challenge-container button:hover {
+            background-color: #4d9e4d;
+        }
+
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .warning {
+            color: orange;
+            font-weight: normal;
+        }
+
+        /* Two-column layout */
+        .challenge-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .challenge-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="about.html">About</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>Challenges</h1>
+        <p>Welcome to the Challenges page! Here, you will find a variety of tasks designed to test and improve your
+            cybersecurity skills. Select a challenge to get started and show off your expertise.</p>
+
+        <!-- Case-sensitive warning -->
+        <div class="warning">
+            <p><strong>Important:</strong> All answers are <em>case-sensitive</em>. The flag must be entered
+                <strong>exactly</strong> as written in the challenge description. Be aware that only the word "FLAG"
+                should be in uppercase; other parts of the flag need to match the exact case.</p>
+        </div>
+
+        <!-- Challenge Containers in two columns -->
+        <div class="challenge-list">
+            <div class="challenge-container">
+                <h3>Challenge 1: Secret message</h3>
+                <div id="fileDownload">
+                    <p>Johnny Boy Ripped His Shirt While Delivering It...</p>
+                    <a href="Quite_the_Text-protected.pdf" download="Quite_the_Text-protected.pdf">
+                        <button>Download Challenge File</button>
+                    </a>
+                    <p></p>
+                </div>
+                <input type="text" id="challenge1" placeholder="Example: FLAG{password123}">
+                <button onclick="checkAnswer('challenge1')">Submit</button>
+                <p class="result" id="result1"></p>
+            </div>
+
+            <div class="challenge-container">
+                <h3>Challenge 2: Can you see it?</h3>
+                <input type="text" id="challenge2" placeholder="Example: FLAG{password123}">
+                <button onclick="checkAnswer('challenge2')">Submit</button>
+                <p class="result" id="result2"></p>
+            </div>
+
+            <div class="challenge-container">
+                <h3>Challenge 3: Cryptography</h3>
+                <div>
+                    <p>Use the key of ROME to unlock the treasure box of Caesar</p>
+                    <p>WW11Xq4xOBPYU3_f{VD}</p>
+                </div>
+                <input type="text" id="challenge3" placeholder="Example: FLAG{password123}">
+                <button onclick="checkAnswer('challenge3')">Submit</button>
+                <p class="result" id="result3"></p>
+            </div>
+
+            <div class="challenge-container">
+                <h3>Challenge 4: Game Administrator</h3>
+                <p>What does this do?</p>
+                <a href="tictactoe.exe" download="tictactoe.exe">
+                    <button>Download Game</button>
+                </a>
+                <p></p>
+                <input type="text" id="challenge4" placeholder="Example: FLAG{password123}">
+                <button onclick="checkAnswer('challenge4')">Submit</button>
+                <p class="result" id="result4"></p>
+            </div>
+
+            <div class="challenge-container">
+                <h3>Challenge 5: Steganography</h3>
+                <div>
+                    <p>What can you see?</p>
+                    <a href="Majestic_Creature.jpg" download>
+                        <button>Download Challenge File</button>
+                    </a>
+                    <p></p>
+                </div>
+                <input type="text" id="challenge5" placeholder="Example: FLAG{password123}">
+                <button onclick="checkAnswer('challenge5')">Submit</button>
+                <p class="result" id="result5"></p>
+            </div>
+
+            <div class="challenge-container">
+                <h3>Challenge 6: What a nice Website</h3>
+                <p>What is it made of ?</p>
+                <!--It's made of FLAGS!-->
+                <input type="text" id="challenge6" placeholder="Example: FLAG{password123}">
+                <!--<input type="text" id="challenge6" placeholder="Example: FLAG{IT%_%uRe_lS}">-->
+                <button onclick="checkAnswer('challenge6')">Submit</button>
+                <p class="result" id="result6"></p>
+            </div>
+
+            <div class="challenge-container">
+                <h3>Challenge 7: What is this?</h3>
+                <p>Can you subtract ALPHABET? Yes i can but only ONCE</p>
+                <a href="secret_message.txt" download="secret_message.txt">
+                    <button>secret_message.txt</button>
+                </a>
+                <p></p>
+                <input type="text" id="challenge7" placeholder="Example: FLAG{password123}">
+                <button onclick="checkAnswer('challenge7')">Submit</button>
+                <p class="result" id="result7"></p>
+            </div>
+
+            <div class="challenge-container">
+                <h3>Challenge 8: Reverse Engineering</h3>
+                <p>Th3 flag is hidd3n in th3 code. Or is it?</p>
+                <a href="code.txt" download="code.txt">
+                    <button>Check the Code</button>
+                </a>
+                <p></p>
+                <input type="text" id="challenge8" placeholder="Example: FLAG{password123}">
+                <button onclick="checkAnswer('challenge8')">Submit</button>
+                <p class="result" id="result8"></p>
+            </div>
+
+            <div class="challenge-container">
+                <h3>Challenge 9: What is my NAME?</h3>
+                <p>WE made you!</p>
+                <input type="text" id="challenge9" placeholder="Example: FLAG{password123}">
+                <button onclick="checkAnswer('challenge9')">Submit</button>
+                <p class="result" id="result9"></p>
+            </div>
+
+            <div class="challenge-container">
+                <h3>Challenge 10: Metadata</h3>
+                <p>Our agents found out that this photo is hiding something</p>
+                <a href="downhill.jpg" download>
+                    <button>Download Challenge File</button>
+                </a>
+                <p></p>
+                <input type="text" id="challenge10" placeholder="Example: FLAG{password123}">
+                <button onclick="checkAnswer('challenge10')">Submit</button>
+                <p class="result" id="result10"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 CTF Website. All Rights Reserved.
+    </footer>
+
+    <script>
+       function checkAnswer(challengeId) {
+    const userAnswer = document.getElementById(challengeId).value.trim();
+    let resultId;
+
+
+    if (challengeId === "challenge10") {
+        resultId = "result10";
+    } else {
+        resultId = "result" + challengeId.charAt(challengeId.length - 1);
+    }
+
+    const resultElement = document.getElementById(resultId);
+    const apiUrl = "https://svetine-github-1.onrender.com";
+
+    fetch("https://svetine-github-1.onrender.com/validate", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            challengeId: challengeId,
+            userAnswer: userAnswer,
+        }),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+
+        resultElement.textContent = data.message;
+        resultElement.style.color = data.valid ? "green" : "red";
+    })
+    .catch((error) => {
+        resultElement.textContent = "An error occurred. Please try again.";
+        resultElement.style.color = "red";
+    });
+
+    document.getElementById(challengeId).value = "";
+}
+
+        function saveToLocalStorage(challengeId, userAnswer, feedback, color) {
+    const resultId = "result" + challengeId.charAt(challengeId.length - 1);
+    const storedData = {
+        userAnswer: userAnswer,
+        feedback: feedback,
+        color: color
+    };
+    localStorage.setItem(resultId, JSON.stringify(storedData));
+}
+
+window.onload = function () {
+    for (let i = 1; i <= 10; i++) {
+        const resultId = "result" + i;
+        const challengeId = "challenge" + i;
+        const storedData = JSON.parse(localStorage.getItem(resultId));
+        if (storedData) {
+            document.getElementById(resultId).textContent = storedData.feedback;
+            document.getElementById(resultId).style.color = storedData.color;
+        }
+    }
+};
+    </script>
+
+<script>
+    let startTime = new Date().getTime(); // Track when the user starts
+    let completedChallenges = 0;  // Keep track of how many challenges are completed
+    
+    function checkAnswer(challengeId) {
+        const userAnswer = document.getElementById(challengeId).value.trim();
+        let resultId;
+
+        if (challengeId === "challenge10") {
+            resultId = "result10";
+        } else {
+            resultId = "result" + challengeId.charAt(challengeId.length - 1);
+        }
+
+        const resultElement = document.getElementById(resultId);
+        const apiUrl = "https://svetine-github-1.onrender.com";
+
+        fetch("https://svetine-github-1.onrender.com/validate", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                challengeId: challengeId,
+                userAnswer: userAnswer,
+            }),
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            resultElement.textContent = data.message;
+            resultElement.style.color = data.valid ? "green" : "red";
+            if (data.valid) {
+                completedChallenges += 1; // Increment the count of completed challenges
+                if (completedChallenges === 10) {
+                    // If all 10 challenges are completed, show the registration form
+                    showRegistrationForm();
+                }
+            }
+        })
+        .catch((error) => {
+            resultElement.textContent = "An error occurred. Please try again.";
+            resultElement.style.color = "red";
+        });
+
+        document.getElementById(challengeId).value = "";
+    }
+
+    function showRegistrationForm() {
+        const formHTML = `
+            <h3>Congratulations! You've completed all challenges.</h3>
+            <p>Please register your name and surname to save your progress.</p>
+            <form id="registrationForm">
+                <input type="text" id="name" placeholder="Your First Name" required><br>
+                <input type="text" id="surname" placeholder="Your Last Name" required><br>
+                <input type="submit" value="Submit">
+            </form>
+        `;
+        const container = document.querySelector('.container');
+        container.innerHTML = formHTML;
+
+        const registrationForm = document.getElementById("registrationForm");
+        registrationForm.addEventListener("submit", submitRegistrationForm);
+    }
+
+    function submitRegistrationForm(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const surname = document.getElementById("surname").value.trim();
+
+        if (name && surname) {
+            const endTime = new Date().getTime(); // Get the time when the user finishes
+            const timeElapsed = (endTime - startTime) / 1000; // Time in seconds
+
+            // Send the data to the backend
+            fetch("https://svetine-github-1.onrender.com/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: name,
+                    surname: surname,
+                    timeElapsed: timeElapsed, // Send the time elapsed
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Your registration was successful!");
+                } else {
+                    alert("There was an error with registration.");
+                }
+            })
+            .catch(error => {
+                console.error("Error submitting registration:", error);
+                alert("An error occurred while submitting your data.");
+            });
+        } else {
+            alert("Please provide both name and surname.");
+        }
+    }
+</script>
+
+
+</body>
+
+</html>

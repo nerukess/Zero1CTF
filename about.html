@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #0f3d0f;
+            color: #d4f4d4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1a4d1a;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            color: #d4f4d4;
+        }
+
+        nav {
+            background: #133913;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: #d4f4d4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #76c776;
+        }
+
+        h1 {
+            color: #76c776;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #b3e6b3;
+        }
+
+        /* Visible link around name "Tautvydas" */
+        .name-link {
+            color: #d4f4d4;        /* Keep original text color */
+            text-decoration: none; /* No underline */
+        }
+
+        .name-link:hover {
+            color: #76c776;        /* Color change on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="about.html">About</a>
+        <a href="challenges.html">Challenges</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>About Our CTF Website</h1>
+        <p>Welcome to our Capture The Flag (CTF) website! This platform is designed for individuals passionate about
+            cybersecurity and problem-solving. Whether you're a beginner or an experienced hacker, our challenges will
+            test your skills and push your limits.</p>
+
+        <p>We offer 10 unique and engaging challenges that cover a variety of topics such as cryptography, web
+            exploitation, reverse engineering, and more. Solve all the challenges and prove your prowess in the CTF
+            arena!</p>
+
+        <p>This website was created by a group of enthusiasts dedicated to learning and sharing knowledge in the field
+            of cybersecurity.</p>
+
+        <p><strong>Creators:</strong> <em><a href="flag.txt" class="name-link" title="Click me for the flag!">Tautvydas Ruseckas</a></em>, <em>Rokas Nausėdas.</em></p>
+    </div>
+
+    <footer>
+        &copy; 2024 CTF Website. All Rights Reserved.
+    </footer>
+</body>
+
+</html>
